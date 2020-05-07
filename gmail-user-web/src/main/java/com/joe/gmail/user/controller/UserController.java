@@ -1,8 +1,9 @@
 package com.joe.gmail.user.controller;
 
-import com.joe.gmail.service.UserService;
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.joe.gmail.bean.UmsMember;
 import com.joe.gmail.bean.UmsMemberReceiveAddress;
+import com.joe.gmail.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,7 @@ import java.util.List;
 @Controller
 public class UserController {
 
-    @Autowired
+    @Reference
     UserService userService;
 
     @RequestMapping("getReceiveAddressByMemberId")

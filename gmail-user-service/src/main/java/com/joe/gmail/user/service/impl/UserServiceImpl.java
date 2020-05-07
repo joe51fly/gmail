@@ -1,12 +1,13 @@
 package com.joe.gmail.user.service.impl;
 
-import com.joe.gmail.service.UserService;
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.alibaba.dubbo.config.annotation.Service;
 import com.joe.gmail.bean.UmsMember;
 import com.joe.gmail.bean.UmsMemberReceiveAddress;
+import com.joe.gmail.service.UserService;
 import com.joe.gmail.user.mapper.UmsMemberReceiveAddressMepper;
 import com.joe.gmail.user.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
